@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mail_mail_form" model="ir.ui.view">
+            <field name="name">Mail Outbox</field>
+            <field name="model">inherit.mail.mail</field>
+            <field name="arch" type="xml">
+                <form string="Email Mail">
+                    <header>
+                        <button name="send" string="Send Now" type="object" states='outgoing' class="oe_highlight"/>
+                        <button name="mark_outgoing" string="Retry" type="object" states='exception,cancel'/>
+                        <button name="cancel" string="Cancel" type="object" states='outgoing'/>
+                        <field name="state" widget="statusbar" statusbar_visible="outgoing,sent,received,exception,cancel"/>
+                    </header>
+                     <sheet>
+                         <group>
+                             <field name="logged_in_user" invisible="1"/>
+                             <field name="to_email"/>
+                             <field name="email_to" invisible="1"/>
+                             <field name="cc_email"/>
+                             <field name="email_cc" invisible="1"/>
+                             <field name="subject"/>
+                         </group>
+                         <group>
+                             <field name="body_html" widget="html" options="{'style-inline': true}" string="Body"/>
+                         </group>
+                         <group>
+                             <field name="attachment_ids">
+                                 <tree>
+                                    <field name="name"/>
+                                    <field name="mimetype" invisible="1"/>
+                                    <field name="datas" filename="name" widget="pdf"/>
+                                 </tree>
+                             </field>
+                         </group>
+                         <notebook>
+                            <page string="Failure Reason" attrs="{'invisible': [('state', '!=', 'exception')]}">
+                                <field name="failure_reason"/>
+                            </page>
+                             <page string="Advanced" groups="base.group_no_one" invisible="1">
+                                <group>
+                                    <group string="Status">
+                                        <field name="auto_delete"/>
+                                        <field name="notification"/>
+                                        <field name="message_type"/>
+                                        <field name="mail_server_id"/>
+                                        <field name="model"/>
+                                        <field name="res_id"/>
+                                    </group>
+                                    <group string="Headers">
+                                        <field name="message_id"/>
+                                        <field name="references"/>
+                                        <field name="headers"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="mail_mail_tree" model="ir.ui.view">
+            <field name="name">Mail Outbox</field>
+            <field name="model">inherit.mail.mail</field>
+            <field name="arch" type="xml">
+                <tree string="Email Mail">
+                    <field name="to_email"/>
+                    <field name="cc_email"/>
+                    <field name="subject"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mail_mail_action" model="ir.actions.act_window">
+            <field name="name">Mail Outbox</field>
+            <field name="res_model">inherit.mail.mail</field>
+            <field name="view_type">form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="domain">[('logged_in_user.id','=',uid)]</field>
+        </record>
+        <menuitem id="main_email_menu" name="Email" sequence="0" web_icon="email_exchange,static/src/img/email.jpg"/>
+        <menuitem id="mail_mail_menu" name="Mail Outbox" parent="main_email_menu" action="mail_mail_action" sequence="0"/>
+
+    </data>
+</odoo>

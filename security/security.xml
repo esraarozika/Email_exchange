@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="module_category_email_exchange">
+            <field name="name">Email System</field>
+            <field name="description">Category for Email</field>
+    </record>
+    <record id="group_mail_settings" model="res.groups">
+        <field name="name">mail users</field>
+        <field name="category_id" ref="module_category_email_exchange"/>
+    </record>
+</odoo>

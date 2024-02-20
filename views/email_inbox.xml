@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="email_inbox_form" model="ir.ui.view">
+            <field name="name">Email Inbox</field>
+            <field name="model">inbox.mail</field>
+            <field name="arch" type="xml">
+                <form string="Email Inbox">
+                     <sheet>
+                         <group>
+                             <field name="logged_in_user" invisible="1"/>
+                             <field name="from_email"/>
+                             <field name="subject"/>
+                         </group>
+                         <group>
+                             <field name="text" widget="html" options="{'style-inline': true}" string="Body"/>
+                         </group>
+                         <group>
+                             <field name="attachment_ids" readonly="1">
+                               <tree>
+                                    <field name="name"/>
+                                    <field name="mimetype" invisible="1"/>
+                                    <field name="datas" filename="name" widget="pdf"/>                                 </tree>
+                             </field>
+                         </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="email_inbox_tree" model="ir.ui.view">
+            <field name="name">Email Inbox</field>
+            <field name="model">inbox.mail</field>
+            <field name="arch" type="xml">
+                <tree string="Email Inbox">
+                    <field name="from_email"/>
+                    <field name="subject"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="email_inbox_action" model="ir.actions.act_window">
+            <field name="name">Email Inbox</field>
+            <field name="res_model">inbox.mail</field>
+            <field name="view_type">form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name="domain">[('logged_in_user.id','=',uid)]</field>
+        </record>
+
+
+        <menuitem id="inbox_menu" name="Mail Inbox" parent="main_email_menu" action="email_inbox_action"/>
+
+    </data>
+</odoo>

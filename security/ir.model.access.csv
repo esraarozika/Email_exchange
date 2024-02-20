@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inbox_mail,access.inbox.mail,model_inbox_mail,,1,1,1,1
+access_inherit_mail_mail,access.inherit.mail.mail,model_inherit_mail_mail,,1,1,1,1
+access_mail_servers,access.mail.servers,model_mail_servers,,1,1,1,1
+access_ir_mail_server,ir_mail_server,base.model_ir_mail_server,group_mail_settings,1,1,1,1
+access_snailmail_letter,access_snailmail_letter,snailmail.model_snailmail_letter,group_mail_settings,1,1,1,1
+access_mail_mail,access_mail_mail,mail.model_mail_mail,group_mail_settings,1,1,1,1
+access_mail_followers,access_mail_followers,mail.model_mail_followers,group_mail_settings,1,1,1,1
+access_mail_notification,access_mail_notification,mail.model_mail_notification,group_mail_settings,1,1,1,1
+access_mail_alias,access_mail_alias,mail.model_mail_alias,group_mail_settings,1,1,1,1
+access_mail_template,access_mail_template,mail.model_mail_template,group_mail_settings,1,1,1,1
+access_mail_activity_type,access_mail_activity_type,mail.model_mail_activity_type,group_mail_settings,1,1,1,1
+access_mail_blacklist,access_mail_blacklist,mail.model_mail_blacklist,group_mail_settings,1,1,1,1
+access_fetchmail_server,access_fetchmail_server,fetchmail.model_fetchmail_server,group_mail_settings,1,1,1,1
+

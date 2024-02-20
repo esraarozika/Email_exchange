@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mail_inherit_res_users" model="ir.ui.view">
+        <field name="name">mail_inherit_res_users_form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[2]" position="after">
+                <page string="Credentials">
+                    <group>
+                        <group>
+                            <field name="x_email_email"/>
+                            <field name="x_email_pass" password="True"/>
+                            <field name="x_email_server"/>
+                            <field name="x_outgoing_server" invisible="1"/>
+                            <field name="x_incoming_server" invisible="1"/>
+                            <field name="x_smtp_port" invisible="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="email_server_form" model="ir.ui.view">
+            <field name="name">Email Servers</field>
+            <field name="model">mail.servers</field>
+            <field name="arch" type="xml">
+                <form string="Email Servers">
+                     <sheet>
+                         <group>
+                             <group>
+                                 <field name="name"/>
+                                 <field name="outgoing_server"/>
+                             </group>
+                             <group>
+                                 <field name="port"/>
+                                 <field name="incoming_server"/>
+                             </group>
+                         </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
