@@ -2,7 +2,7 @@
 
 A custom Odoo module that allows users to send and receive emails using their own email credentials. It also supports adding signatures and attachments to emails directly from within the Odoo environment.
 
-🎥 **Demo Video:** [bit.ly/emailexchange](https://bit.ly/emailexchange)
+🎥 **Demo Video:** [View on Google Drive](https://drive.google.com/file/d/1Qs8BWefdDQX5GFaVYJr0I8jpzIqZzBi6/view?usp=sharing)
 
 ---
 
