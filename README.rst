@@ -14,7 +14,7 @@ A custom Odoo module that allows users to send and receive emails using their ow
 - Upload and send file attachments
 - Dockerized for easy setup and deployment
 
----
+----
 
 ## 🛠️ Technologies Used
 
@@ -23,7 +23,7 @@ A custom Odoo module that allows users to send and receive emails using their ow
 - Docker
 - Odoo ERP Framework
 
----
+----
 
 ## 🚀 Installation & Usage
 
@@ -62,22 +62,17 @@ A custom Odoo module that allows users to send and receive emails using their ow
 
 =>all records in res.partner (\* Contacts Module)
 
----
+----
 
 📂 Folder Structure:
 
 Email-exchange/
 
 ├── controllers/
-
 ├── models/
-
 ├── views/
-
 ├── __manifest__.py
-
 ├── __init__.py
-
 ├── README.md
 
 
