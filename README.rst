@@ -1,4 +1,4 @@
-# 📧 Email Exchange Module for Odoo
+###  📧 Email Exchange Module for Odoo
 
 A custom Odoo module that allows users to send and receive emails using their own email credentials. It also supports adding signatures and attachments to emails directly from within the Odoo environment.
 
@@ -6,7 +6,7 @@ A custom Odoo module that allows users to send and receive emails using their ow
 
 ----
 
-## ✨ Features
+### ✨ Features
 
 - Authenticate users with their email accounts
 - Send and receive emails within Odoo
