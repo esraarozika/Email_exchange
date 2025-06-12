@@ -29,6 +29,7 @@ A custom Odoo module that allows users to send and receive emails using their ow
 
 1. Clone the repository inside your Odoo `addons` directory:
    ```bash
+   
    git clone https://github.com/esraarozika/Email-exchange.git
 
 
