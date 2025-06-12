@@ -34,12 +34,19 @@ A custom Odoo module that allows users to send and receive emails using their ow
 
 
 * First you should install these python packages:
-1- email
-2- python-imap
-3- regex
-4- bs4
-5- mistletoe
-6- html2text
+
+   1- email
+
+   2- python-imap
+
+   3- regex
+
+   4- bs4
+
+   5- mistletoe
+
+   6- html2text
+
 
 * Second you should restsart the server 
 
