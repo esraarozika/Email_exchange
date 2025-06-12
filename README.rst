@@ -33,7 +33,9 @@ A custom Odoo module that allows users to send and receive emails using their ow
    git clone https://github.com/esraarozika/Email-exchange.git
 
 
-* First you should install these python packages:
+2.docker-compose up
+
+3.install these python packages:
 
    1- email
 
@@ -46,17 +48,36 @@ A custom Odoo module that allows users to send and receive emails using their ow
    5- mistletoe
 
    6- html2text
+   
+   *  you should restsart the server 
+
+4.Install the module from the Odoo Apps interface.
+
+5.go to Settingd -> general settings -> External Email Servers => Make it True
+
+6.Go to Email Exchange in the Odoo dashboard:
+   *Add your email credentials
+   *Compose and send emails
+   *Add signatures and attachments
+
+=>all records in res.partner (\* Contacts Module)
+
+---
+
+📂 Folder Structure:
+
+Email-exchange/
+
+├── controllers/
+
+├── models/
+
+├── views/
+
+├── __manifest__.py
+
+├── __init__.py
+
+├── README.md
 
 
-* Second you should restsart the server 
-
-
-* Third update your Apps List then install email exchange module
-
-* Fourth go to Settingd -> general settings -> External Email Servers => Make it True
-
-
-* Fifth put email in email field all records in res.partner (\* Contacts Module)
-
-
-* Sixth fill in credential fields in your logged in user
