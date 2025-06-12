@@ -69,10 +69,15 @@ A custom Odoo module that allows users to send and receive emails using their ow
 Email-exchange/
 
 ├── controllers/
+|
 ├── models/
+|
 ├── views/
+|
 ├── __manifest__.py
+|
 ├── __init__.py
+|
 ├── README.md
 
 
